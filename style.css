@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+   
+}
+ .banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(202, 206, 224, 0.4));
+    background-position: center;
+    background-size: contain;
+
+ }
+.navbar{
+    width: 90%;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+ }
+
+ .logo{
+    width: 160px;
+    margin-top:-10px;
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+
+
+/*تنسيق الشريط*/
+ }
+ .navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+
+ }
+
+ .navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:white;
+    font-weight:600;
+    padding: 15px;
+    border-radius: 5px;
+ }
+li a:hover{
+background-color: rgb(218, 229, 238);
+transition: 0.2s;
+
+
+}
+/*  تغيير لون الكتاب اثناء التاشير عليها في الشريط
+*/
+.navbar a:hover{
+    color: black;
+}
+ /* المحتوي المجود فوق الفديو */
+.content{
+    position: absolute;
+    color:rgb(255, 255, 255);
+    transform: translate(10%);
+    text-align: center;
+    margin-top: 10%;
+
+}
+.content h1{
+
+    margin-bottom: 40px;
+    font-size: 50px;
+    font-weight: 400;
+    
+}
+.content h2{
+     margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 100;
+}
+/*
+.banner video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+*/
+.back-video{
+   position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width:100%;
+        height: auto;
+    }
+}
