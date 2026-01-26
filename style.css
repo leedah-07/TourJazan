@@ -1,104 +1,388 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Katibeh&display=swap');
+
+body{
+     font-family: "Katibeh", serif;
+     font-weight: 500;
+     direction: rtl;
+     text-align: right;
+}
 *{
     margin: 0;
     padding: 0;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     font-family: sans-serif;
     box-sizing: border-box;
    
-}
- .banner{
+      
+ 
+} 
+    
+ .banner {
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(202, 206, 224, 0.4));
+    height: 100%;
+    overflow: hidden;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
+    
+ 
+ }
+
+ 
+ .banner video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    
 
  }
-.navbar{
+.navbar {
     width: 90%;
-    padding: 30px;
+    padding: 15px 20px;
     margin: auto;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items:center;
+   justify-content: flex-start; 
+   gap: 40px; 
+   padding:0 5%;
+  
+    
+    
+    
 
  }
 
- .logo{
+ .navbar logo{
     width: 160px;
     margin-top:-10px;
     cursor: pointer;
-    height: 100px;
-    width: 100px;
+   
 
+}
 
 /*تنسيق الشريط*/
- }
- .navbar ul li{
+
+.navbar .links{
     list-style: none;
-    display: inline-block;
-    margin: 20px;
+    display:inline-block;
 
+  
+}
+ .links li {
+
+    list-style:none;
+    display:inline-flex;
+    margin:20px;
+   align-items:normal
+ 
  }
+ 
+  .links li a  {
 
- .navbar ul li a{
     text-decoration: none;
     text-transform: uppercase;
     color:white;
-    font-weight:600;
-    padding: 15px;
-    border-radius: 5px;
+    font-weight:  600;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 15px;
+   
+ 
  }
+
 li a:hover{
 background-color: rgb(218, 229, 238);
-transition: 0.2s;
+transition: 0.2s;}
 
+/*style the cheat for  smoll navabar*/
+.navbar .toggle_btn{
+ color: white;
+ font-size: 1.5rem;
+ cursor :pointer;
+ display: none;
+}
+
+/*DROPDOEN MENU*/
+
+.dropdow_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top:60px;
+    height: 0; 
+    width: 200px;
+    background: rgba (255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    right: 10px;
+    flex-direction: column;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdow_menu.open {
+    height: 240px;
+    display: flex;
+}
+
+.dropdow_menu li{
+
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
+
+.dropdow_menu li a{
+    color: white;
+    font-weight:600;
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+  
+}
+
+
+  /*تنسيق وقت ضهور الشريط على شكل نقاط حين تصغير الشاشه */
+@media (max-width:932px){
+.navbar .links{
+    display: none;
+}
+nav ul{
+    display: none;
+}
+
+.navbar .toggle_btn{
+    display: block;
+    
+}
+.dropdow_menu{ 
+    display: block;
+}
+}
+
+/*تنسيق وقت اختفاء dropdown*/
+@media(min-width:932px){
+    .dropdow_menu{
+        display: none !important;
+    }
+}
+ 
+
+
+
 /*  تغيير لون الكتاب اثناء التاشير عليها في الشريط
 */
-.navbar a:hover{
+ .navbar a:hover{
+
     color: black;
 }
+.dropdow_menu  a:hover{
+    color:black;
+}
+
  /* المحتوي المجود فوق الفديو */
 .content{
     position: absolute;
     color:rgb(255, 255, 255);
     transform: translate(10%);
     text-align: center;
-    margin-top: 10%;
+    margin-top: 5%;
+   
 
 }
 .content h1{
-
+    margin-top: 30px;
     margin-bottom: 40px;
     font-size: 50px;
-    font-weight: 400;
+    font-weight: 600;
+    font-size: 70px;
+    padding-right: 20%;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+   text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
     
 }
 .content h2{
-     margin-bottom: 40px;
-    font-size: 20px;
-    font-weight: 100;
+     margin-bottom: 120px;
+    font-size: 30px;
+    font-weight: 100px;
+    padding-right: 20%;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+
 }
-/*
-.banner video{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
-*/
-.back-video{
+/* تنسيق الفديو الذي في الخلفيه*/
+  .back-video{
    position: absolute;
     right: 0;
     bottom: 0;
     z-index: -1;
-}
+    
 
+  
+}
 
 @media (min-aspect-ratio: 16/9){
     .back-video{
         width:100%;
-        height: auto;
+        height:auto;
     }
 }
+   
+.content{
+    position:relative;
+    margin-bottom: 253px; 
+    
+}
+
+.container{
+
+    display: flex;
+}
+
+/*main heading of the cards | العناوين الريسية للبطاقات (المدينة- الشاطئي - الجبال ) */
+.main-heading {
+
+    font-size: 22px; 
+    text-align: right; 
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-right: 5%;
+ 
+
+}
+
+/*تنسيق بطاقات| cards*/
+
+.cards.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+ align-items: center;
+ 
+}
+
+.card {
+  background: #c5d5db;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+
+}
+
+ 
+
+/*تنسيق الصور داخل البطاقات | card images*/
+
+.img-box {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+object-fit:cover;
+
+
+
+/*تنسيق الازرار تحت البطاقات  | bon the cards*/
+}
+.cards-btn {
+  grid-column: 1 / -1; 
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 30px;
+  background: #553d26;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #546f97;
+}
+
+/*footer | تنسيق الفوتر */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  background: #111;
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 20%;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-section h3,
+.footer-contact h3 {
+  margin-bottom: 15px;
+  color: rgb(103, 144, 233);
+}
+
+.footer-section ul,
+.contact-icons {
+  list-style: none;
+}
+
+.footer-section li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo {
+  width: 120px;
+  margin: 20px 0;
+}
+
+.contact-icons li {
+  margin-bottom: 12px;
+}
+
+.contact-icons a {
+  color: #ccc;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.contact-icons a:hover {
+  color: #e2a1af;
+  transform: translateX(-4px);
+}
+
+.footer-copy {
+  grid-column: 1 / -1;
+  margin-top: 20px;
+  color: #aaa;
+}
+
