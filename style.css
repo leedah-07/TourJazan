@@ -6,6 +6,7 @@ body{
      font-weight: 500;
      direction: rtl;
      text-align: right;
+     font-weight: 600;
 }
 *{
     margin: 0;
@@ -110,20 +111,21 @@ transition: 0.2s;}
 
 /*DROPDOEN MENU*/
 
+
 .dropdow_menu {
     display: none;
     position: absolute;
-    right: 2rem;
-    top:60px;
-    height: 0; 
+    right: 10px;
+    top: 60px;
     width: 200px;
-    background: rgba (255,255,255,0.1);
+    height: 0;
+    background: rgba(255,255,255,0.1);
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
-    right: 10px;
     flex-direction: column;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 999;
 }
 
 .dropdow_menu.open {
@@ -141,12 +143,12 @@ transition: 0.2s;}
 }
 
 .dropdow_menu li a{
-    color: white;
+    color: rgb(226, 226, 226);
     font-weight:600;
     padding: 10px;
     border-radius: 15px;
     text-decoration: none;
-  
+
 }
 
 
@@ -176,10 +178,7 @@ nav ul{
 }
  
 
-
-
-/*  تغيير لون الكتاب اثناء التاشير عليها في الشريط
-*/
+/*  تغيير لون الكتاب اثناء التاشير عليها في الشريط*/
  .navbar a:hover{
 
     color: black;
@@ -211,7 +210,7 @@ nav ul{
     
 }
 .content h2{
-     margin-bottom: 120px;
+    margin-bottom: 120px;
     font-size: 30px;
     font-weight: 100px;
     padding-right: 20%;
@@ -224,9 +223,6 @@ nav ul{
     right: 0;
     bottom: 0;
     z-index: -1;
-    
-
-  
 }
 
 @media (min-aspect-ratio: 16/9){
@@ -238,12 +234,10 @@ nav ul{
    
 .content{
     position:relative;
-    margin-bottom: 253px; 
-    
+    margin-bottom: 253px;  
 }
 
 .container{
-
     display: flex;
 }
 
@@ -267,8 +261,7 @@ nav ul{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
- align-items: center;
- 
+  align-items: center;
 }
 
 .card {
@@ -276,8 +269,6 @@ nav ul{
   padding: 15px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  text-align: center;
-
 }
 
  
@@ -528,8 +519,8 @@ object-fit:cover;
   background-position: center;
 
   text-shadow: 
-    5px 5px 5px rgba(0,0,0,0.8),
-   -5px -5px 5px rgba(0,0,0,0.8);
+  5px 5px 5px rgba(0,0,0,0.8),
+ -5px -5px 5px rgba(0,0,0,0.8);
 }
 
 
@@ -543,4 +534,734 @@ object-fit:cover;
 
 .sea a{
   background-image: url("photo/Beach_islands/fursan.png");
+}
+
+
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  background: #f4f6f9;
+}
+
+.info-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #006d77;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #023047;
+}
+
+.card p {
+  color: #444;
+  line-height: 1.6;
+}
+
+
+/*تنسيق العنوان والصوره  في النبذه */
+ 
+
+
+.about{
+display: flex;
+align-items: center;
+width: 100%;
+min-height: 70vh;
+background:url(photo/background.webp)no-repeat ;
+background-size: cover;
+background-position:center;
+z-index: 1;
+
+}
+
+.about .contant-about1{
+  color:rgb(255, 255, 255);
+  transform: translate(10%);
+  margin-top: 5%;
+  width: 100%;
+  margin-top:5px;
+  text-align: right;
+}
+
+
+
+.about .contant-about1 h2{
+ 
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 50px;
+    font-weight: 600;
+    font-size:50px;
+    padding-right: 20%;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+   text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+   
+}
+/*قسم لوحه المعلومات | dashboard*/
+.about .contant-about1 p{
+    margin-bottom: 40px;
+    font-size: 10px;
+    font-weight: 7px;
+    font-size: 20px;
+    padding-right: 20%;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+   text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+   
+}
+.card_container{
+    display: flex;
+  flex-wrap: wrap;   
+  gap: 15px;
+  width: 100%;
+  height: auto;
+  margin-top: -50px;
+  background-size: cover;
+ background-position: center;
+ 
+ 
+
+}
+ .Weather_card {
+
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 20px;
+  width: 550px;
+  height: 200px;
+  display:flex;
+  direction: ltr;
+  justify-content: space-between;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+  overflow: hidden;
+  margin:15px 20px ;
+
+}
+
+.left {
+  text-align:left;
+}
+
+.right {
+  text-align: right;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.visit_card{
+ background: rgb(255, 255, 255);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 20px;
+  width: 300px;
+  height: 200px;
+  margin:15px 20px ;
+ justify-content: space-between;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+  overflow: hidden;
+  flex:1 0 auto;
+}
+
+.visit_card .content_visit{
+ margin-top: 30px;
+margin-bottom: 40px;
+}
+
+/*محتوى النبذه والصوره الرئيسيه | content of about*/
+
+
+
+.card-about {
+  width: 100%;
+  padding: 20px;
+  margin-top: 70px;
+  border-radius: 15px;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+
+
+/*  العنوان الخاص بالنبذه */
+.title-about2 {
+  width:80%;
+  font-size: 50px;
+  font-weight: bold ;
+  margin-bottom: 15px;
+  text-align:center;
+  margin-bottom: 70px;
+}
+
+/* حاوية الصورة + النص الخاصه بالنبذه*/
+.card-content-about2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* الصورةالخاصه بالنبذه */
+.img-about {
+  flex: 1.5;
+  height: 500px;
+  width: 100vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-about {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+
+}
+
+/*  النص الخاص النبذه  */
+.text-box-about2 {
+  flex: 2.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px;
+ 
+  line-height: 1.5;
+  align-items: center;
+  justify-content:center;
+
+  
+}
+.title h6{
+align-items: right;
+  justify-content:right;
+
+} 
+
+
+/*جعل محتويات بطاقه النبذه عموديا عند الشاشة الصغيره | the card content about arranged vertically on small screens*/
+@media (max-width: 800px) {
+ .card-content-about2 ,
+  .card-content-about2 {
+    flex-direction: column;
+  }
+
+  .img-about,
+  .text-box {
+    width: 100%;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
+
+
+
+.transportation_section{
+  display:flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding:20px;
+ font-size: 20px;
+}
+
+.transportation_titel{
+padding:20px;
+text-align: center;
+
+}
+
+
+
+
+.transportations_boxes{
+ 
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ gap: 10px;
+ justify-content: center;
+
+}
+.transportation{
+
+width: 25%;
+height: 200px;
+margin: 20px;
+background: rgb(220, 238, 241);
+border-radius:20px ;
+box-shadow:  0 5px 20px rgba(0,0,0,0.8);
+text-align: center;
+
+
+
+}
+.transportation{
+
+  /* الحجم الأساسي */
+
+  flex: 1 1 300px;
+  max-width: 350px;
+  max-height:200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.transportation h3{
+  margin-top: 15px;
+}
+
+/* شاشة متوسطة */
+@media (max-width: 750px){
+
+  .transportation{
+    flex: 1 1 45%;
+  }
+
+}
+
+/* شاشة صغيرة */
+@media (max-width: 749px){
+
+  .transportation{
+    flex: 1 1 90%;
+    max-width: 90%;
+  }
+
+}
+
+/*تنسيق صفحة تواصل معنا */
+
+
+
+.contactUS{
+position:relative;
+width: 100%;
+padding:40px 100px;
+
+
+}
+
+.contactUS .title_contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:25px;
+  margin-top: 20px;
+  color: #ffff;
+  text-shadow:2px 2px 0px rgba(0,0,0,0.7);
+  
+}
+
+.form{
+  grid-area: form;
+}
+
+.info{
+  grid-area: info;
+}
+
+.followUS{
+  grid-area: followUS;
+} 
+
+.contact {
+  padding: 45px;
+  background:#fff;
+  box-shadow: 0 8px 30px rgba(0,0,0,1);
+
+}
+
+
+.box_contact
+{
+margin-top: 30px;
+ position:relative;
+ display:grid;
+ grid-template-columns: 2fr 1fr;
+ grid-template-rows: 5fr 4fr;
+ grid-template-areas:
+ "form info"
+ "form followUS";
+ grid-gap:20px;
+
+}
+
+
+/* حاويه الاستماره او ارسال الرسالة*/
+
+.contactUS{
+
+background-image: url(data:image/jpeg;base64,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);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+background-color: rgba(17, 54, 54, 0.637);
+}
+ 
+.contact h3{
+ font-weight: 500;
+ font-size: 2em;
+ margin-bottom: 10px;
+ width: 90%;
+ text-align: center;
+ color:black
+
+}
+
+
+.formBox{
+  position: relative;
+  width: 100%;
+}
+
+.formBOX .row50{
+display: flex;
+gap:20px;
+}
+
+.inputBox{
+display: flex;
+flex-direction: column;
+margin-bottom: 15px;
+width: 90%;
+
+}
+
+.inputBox span{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  color:rgb(87, 59, 8);
+ 
+}
+.inputBox input{
+padding:10px;
+font-size:1.1em;
+}
+
+.inputBox textarea{
+padding:10px;
+font-size:1.1em;
+resize: none;
+min-height: 200px;
+margin-bottom: 10px;
+}
+
+.inputBox button{
+  height: 40px;
+ font-size: 1.1em;
+ max-width: 120px;
+ cursor:pointer;
+ background-color:rgb(17, 97, 31);
+ color: #fff;
+}
+
+/*info saction | تواصل معنا */
+
+.info{
+  background-color: rgb(1, 0, 48);
+  border-radius: 30px;
+ 
+}
+
+.info h3{
+  color:#fff;
+  margin-bottom: 50px;
+}
+
+.info .infoBox div{
+display: flex;
+
+}
+
+.infoBox .logo {
+display: flex;
+color: #ffffff;
+margin-top:25px;
+
+}
+
+.infoBox  i{
+  margin-left:10px;
+}
+
+.info .infoBox span{
+  display: flex;
+ font-size:1.2em;
+ font-weight:300;
+}
+
+.info .infoBox  p {
+  color:#fff;
+}
+
+.info .infoBox  a{
+  color:#fff;
+}
+
+.followUS{
+    border-radius: 30px;
+ 
+}
+
+.sci {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    gap: 20px;             
+   margin-top:50px
+}
+ 
+.sci li{
+  list-style: none;
+ 
+ }
+.sci li a{
+  color:rgb(1, 0, 48);
+  font-size: 3em;
+  
+}
+
+@media (max-width: 900px){
+
+    .contactUS{
+        padding: 20px;
+    }
+
+    .box_contact{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "form"
+        "info"
+        "followUS";
+    }
+
+    .formBox .row50{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .inputBox{
+        width: 100%;
+    }
+
+    .contact{
+        padding: 25px;
+    }
+
+    .title_contact h2{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .sci{
+        margin-top: 0;
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 480px){
+
+    .contactUS{
+        padding: 15px;
+    }
+
+    .contact{
+        padding: 20px;
+    }
+
+    .sci li a{
+        font-size: 2.2rem;
+    }
+
+    .info h3,
+    .contact h3{
+        font-size: 1.5rem;
+    }
+}
+
+/* إشعار نجاح إرسال الرسالة */
+
+.success-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, -100px);
+
+    background-color: #198754;
+    color: white;
+
+    padding: 15px 30px;
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+
+    opacity: 0;
+    transition: all 0.4s ease;
+
+    z-index: 9999;
+}
+
+/* عند ظهور الإشعار */
+
+.success-message.show {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+.success-message i {
+    font-size: 22px;
+}
+
+/*تنسيق صفحة الانشطة| Activity page*/
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf6f6;
+    direction: rtl;
+}
+.container-activity {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px;
+    
+}
+
+
+/* كل خانة رئيسية */
+
+.section-activity {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+  margin-top: 20px;
+}
+
+
+/* عنوان الخانة */
+
+.section-activity h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* البطاقات داخل كل خانة */
+
+.cards-activity {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  
+}
+
+
+/* البطاقة */
+
+.card-activity {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    text-align: center;
+    height: 500px;
+   
+    
+}
+
+
+/* الصورة */
+
+.card-activity img {
+
+  width: 100%;
+  height: 60%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+   
+
+
+/* عنوان البطاقة */
+
+.card-activity h3 {
+    font-size: 16px;
+    padding: 10px 10px 5px;
+    margin-bottom: 5px;
+}
+
+
+/* الجمل */
+
+.card-activity a{
+ 
+  display: inline-block;
+ padding: 8px 15px;
+  background:#81a7b646;
+  color: #000;
+  color: rgb(65, 44, 17);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media(max-width: 800px){
+
+.cards-activity{
+  grid-template-columns: 1fr;;
+  }
+
 }
