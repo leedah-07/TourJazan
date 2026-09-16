@@ -1,6 +1,6 @@
 
 
-// 📅 التاريخ والوقت
+//  التاريخ والوقت
 function updateDateTime() {
   const now = new Date();
 
@@ -23,9 +23,7 @@ setInterval(updateDateTime, 1000);
 updateDateTime();
 
 
-
-
-// 🌤️ جلب الطقس
+//  جلب الطقس
 async function getWeather() {
 
     try {
