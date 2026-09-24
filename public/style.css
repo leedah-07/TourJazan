@@ -48,13 +48,9 @@ body{
     margin: auto;
     display: flex;
     align-items:center;
-   justify-content: flex-start; 
+   justify-content: space-between; 
    gap: 40px; 
    padding:0 5%;
-  
-    
-    
-    
 
  }
 
@@ -62,8 +58,8 @@ body{
     width: 160px;
     margin-top:-10px;
     cursor: pointer;
-   
-
+  
+    
 }
 
 /*تنسيق الشريط*/
@@ -79,7 +75,7 @@ body{
     list-style:none;
     display:inline-flex;
     margin:20px;
-   align-items:normal
+   align-items:center
  
  }
  
@@ -92,7 +88,8 @@ body{
     font-size: 20px;
     padding: 10px;
     border-radius: 15px;
-   
+      align-items:center
+
  
  }
 
@@ -106,7 +103,8 @@ transition: 0.2s;}
  font-size: 1.5rem;
  cursor :pointer;
  display: none;
-
+ justify-content: space-between;
+    
 }
 
 /*DROPDOEN MENU*/
@@ -115,8 +113,8 @@ transition: 0.2s;}
 .dropdow_menu {
     display: none;
     position: absolute;
-    right: 10px;
-    top: 60px;
+   left: 10px;
+    top: 90px;
     width: 200px;
     height: 0;
     background: rgba(255,255,255,0.1);
@@ -500,7 +498,15 @@ object-fit:cover;
 
 
 
-@media (max-width: 932px) {
+
+
+/*====================================================
+laptop
+=====================================================*/
+
+@media (max-width: 767px) {
+
+    
 
     .navbar .links {
         display: none;
@@ -509,11 +515,6 @@ object-fit:cover;
     .navbar .toggle_btn {
         display: block;
     }
-
-    .dropdow_menu {
-        display: block;
-    }
-
 }
 
 
@@ -528,9 +529,10 @@ object-fit:cover;
     .navbar {
         width: 100%;
         padding: 10px 20px;
-        justify-content: flex-start;
+        margin-bottom: 30px;
     }
 
+    
     .navbar .logo {
         width: 120px;
     }
@@ -588,11 +590,8 @@ object-fit:cover;
 
     .main-heading {
         width: 100%;
-
         padding: 0 15px;
-
         margin-top: 30px;
-
         text-align: center;
     }
 
@@ -616,10 +615,13 @@ object-fit:cover;
         padding: 0 15px;
     }
 
-    .card , .card-places , .card-places.reverse{
-        width: 100%;
-      max-width: calc(100% - 30px) ;
-    }
+    
+.card-places,
+.card-places.reverse {
+    width: calc(100% - 40px);
+    max-width: none;
+    margin: 90px auto 0;
+}
 
     .img-box , .img-places {
         width: 100%;
@@ -657,16 +659,25 @@ object-fit:cover;
         padding: 10px 25px;
     }
 
+  }
 
-@media (min-width: 933px) {
+@media (min-width: 767px) {
 
     .dropdow_menu {
         display: none !important;
     }
 
-}
+      .navbar .links {
+        display: inline-block;
+    }
+
+    .navbar .toggle_btn {
+        display: none;
+    }
 
 }
+
+
 
 
 /*تنسيق العنوان والصوره  في النبذه */
@@ -1288,7 +1299,7 @@ body {
   
     padding: 20px;
     border-radius: 12px;
- background-color: #e2eeaf;
+ background-color: #e9f0c5;
      margin-top: 0;
 
 }
